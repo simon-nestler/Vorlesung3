@@ -1,8 +1,15 @@
+import java.io.PrintWriter;
 import java.util.Calendar;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        beispieleFuerSteuercodes();
+        beispielePrintWriter();
+    }
+
+    public static void beispielePrintWriter() {
+        PrintWriter out = new PrintWriter(System.out, true);
+        out.println("Hallo Welt? Noch jemand hier?");
+
     }
 
     public static void beispieleFuerSteuercodes() {
