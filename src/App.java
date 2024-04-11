@@ -6,12 +6,15 @@ public class App {
     }
 
     public static void beispieleFuerSteuercodes() {
-        String article = "Buch";
-        float price = 33.32499f;
         char c = 'A';
         Calendar cal = Calendar.getInstance();
 
-        System.out.printf("Dieser Wert wird ausgegeben %TH:%TM:%TS", cal, cal, cal);
+        System.out.printf("Aktuelle Uhrzeit: %TH:%<TM:%<TS%n", cal);
+        System.out.printf("Aktueller Tag: %Td.%<Tm.%<TY%n", cal);
+        System.out.printf("%TR%n", cal);
+        System.out.printf("%TT%n", cal);
+        System.out.printf("%TD%n", cal);
+        System.out.printf("%TF%n", cal);
         System.out.println();
     }
 
