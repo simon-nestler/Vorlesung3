@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class App {
     public static void main(String[] args) throws Exception {
         beispieleFuerSteuercodes();
@@ -7,9 +9,9 @@ public class App {
         String article = "Buch";
         float price = 33.32499f;
         char c = 'A';
-        int i = 68;
+        Calendar cal = Calendar.getInstance();
 
-        System.out.printf("Dieser Wert wird ausgegeben %C", i);
+        System.out.printf("Dieser Wert wird ausgegeben %TH:%TM:%TS", cal, cal, cal);
         System.out.println();
     }
 
