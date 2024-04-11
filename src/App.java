@@ -6,5 +6,7 @@ public class App {
         System.out.println("Betriebssystem: " + properties.getProperty("os.name"));
         System.out.println("Java-Version: " + properties.getProperty("java.version"));
         System.out.println("Username: " + properties.getProperty("user.name"));
+        // user home
+        System.out.println("User Home: " + properties.getProperty("user.home"));
     }
 }
