@@ -1,5 +1,9 @@
+import java.util.Properties;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Properties properties = new Properties(System.getProperties());
+        System.out.println("Betriebssystem: " + properties.getProperty("os.name"));
+
     }
 }
