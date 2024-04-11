@@ -2,13 +2,9 @@ import java.util.Properties;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Properties properties = new Properties(System.getProperties());
-        System.out.println("Betriebssystem: " + properties.getProperty("os.name"));
-        System.out.println("Java-Version: " + properties.getProperty("java.version"));
-        System.out.println("Username: " + properties.getProperty("user.name"));
-        // user home
-        System.out.println("User Home: " + properties.getProperty("user.home"));
-        // java home
-        System.out.println("Java Home: " + properties.getProperty("java.home"));
+    }
+
+    public static void printProperties(Properties properties) {
+
     }
 }
