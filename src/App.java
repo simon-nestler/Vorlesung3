@@ -8,5 +8,7 @@ public class App {
         System.out.println("Username: " + properties.getProperty("user.name"));
         // user home
         System.out.println("User Home: " + properties.getProperty("user.home"));
+        // java home
+        System.out.println("Java Home: " + properties.getProperty("java.home"));
     }
 }
