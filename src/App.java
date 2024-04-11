@@ -1,6 +1,16 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        beispieleFuerPrintF();
+        beispieleFuerSteuercodes();
+    }
+
+    public static void beispieleFuerSteuercodes() {
+        String article = "Buch";
+        float price = 33.32499f;
+        char c = 'A';
+        int i = 68;
+
+        System.out.printf("Dieser Wert wird ausgegeben %C", i);
+        System.out.println();
     }
 
     public static void beispieleFuerPrintF() {
