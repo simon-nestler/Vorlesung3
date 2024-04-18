@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Calendar;
+import java.util.Properties;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -10,8 +11,15 @@ public class App {
     public static void beispielePrintWriter() {
         PrintWriter out;
         try {
+            Properties props = System.getProperties();
+            String os = props.getProperty("os.name");
+
+            System.out.println("Betriebssystem: " + os);
+
+            String home = System.getProperty("user.home");
             out = new PrintWriter("abcdef.txt");
-            out.println("Hallo Welt? Noch jemand hier?");
+
+            out.println("Hallo Welt");
             double price = 33.32499;
             out.printf("Das Buch kostet %.2f Euro\n", price);
             out.close();
