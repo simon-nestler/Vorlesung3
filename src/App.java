@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Calendar;
@@ -10,7 +11,9 @@ public class App {
     public static void beispielePrintWriter() {
         PrintWriter out;
         try {
-            out = new PrintWriter("abcdef.txt");
+            String home = System.getProperty("user.home");
+            out = new PrintWriter(home + File.pathSeparator + "abcdef.txt");
+
             out.println("Hallo Welt? Noch jemand hier?");
             double price = 33.32499;
             out.printf("Das Buch kostet %.2f Euro\n", price);
