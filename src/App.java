@@ -13,13 +13,15 @@ public class App {
         try {
             Properties props = System.getProperties();
             String os = props.getProperty("os.name");
-
-            System.out.println("Betriebssystem: " + os);
-
             String home = System.getProperty("user.home");
-            out = new PrintWriter("abcdef.txt");
 
-            out.println("Hallo Welt");
+            if (os.contains("Win")) {
+                out = new PrintWriter(home + "\\abcdef.txt");
+            } else {
+                out = new PrintWriter(home + "/abcdef.txt");
+            }
+
+            out.println("Hallo");
             double price = 33.32499;
             out.printf("Das Buch kostet %.2f Euro\n", price);
             out.close();
