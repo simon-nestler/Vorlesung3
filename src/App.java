@@ -9,7 +9,7 @@ public class App {
     }
 
     public static void beispielePrintWriter() {
-        PrintWriter out;
+        PrintWriter out = null;
         try {
             String home = System.getProperty("user.home");
             out = new PrintWriter(home + File.pathSeparator + "abcdef.txt");
@@ -17,10 +17,14 @@ public class App {
             out.println("Hallo Welt? Noch jemand hier?");
             double price = 33.32499;
             out.printf("Das Buch kostet %.2f Euro\n", price);
-            out.close();
+            
         } catch (FileNotFoundException e) {
             System.out.println("Datei nicht gefunden");
             e.printStackTrace();
+        }finally{
+            if (out != null) {
+                out.close();
+            }
         }
     }
 
